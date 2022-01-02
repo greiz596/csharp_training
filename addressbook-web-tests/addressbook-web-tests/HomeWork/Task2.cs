@@ -7,7 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
-namespace HomeWork
+namespace Task2
 {
     [TestFixture]
     public class Homework1

@@ -12,17 +12,17 @@ namespace WebAddressboolTests
         [Test]
         public void GroupCreationTests()
         {
-            GoToHomePage();
-            Login(new AccountData ("admin", "secret"));
-            GoToGroupsPage();
-            InitNewGroup();
+            navigationHelper.GoToHomePage();
+            loginHelper.Login(new AccountData ("admin", "secret"));
+            navigationHelper.GoToGroupsPage();
+            groupHelper.InitNewGroup();
             GroupData group = new GroupData("aaa");
             group.Header = "ddd";
             group.Footer = "fff";
             FillTheFields(group);
-            Submit();
-            ReturnToGroupPage();
-            Logout();
+            groupHelper.Submit();
+            groupHelper.ReturnToGroupPage();
+            
         }
     }
 }

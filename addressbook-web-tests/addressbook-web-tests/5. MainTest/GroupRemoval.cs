@@ -12,12 +12,12 @@ namespace WebAddressboolTests
         [Test]
         public void GroupRemovalTest()
         {
-            GoToHomePage();
-            Login(new AccountData("admin", "secret"));
-            GoToGroupsPage();
-            SelectGroup(2);
-            RemoveGroup();
-            ReturnToGroupPage();
+            navigationHelper.GoToHomePage();
+            loginHelper.Login(new AccountData("admin", "secret"));
+            navigationHelper.GoToGroupsPage();
+            groupHelper.SelectGroup(2);
+            groupHelper.RemoveGroup();
+            groupHelper.ReturnToGroupPage();
         }        
     }
 }

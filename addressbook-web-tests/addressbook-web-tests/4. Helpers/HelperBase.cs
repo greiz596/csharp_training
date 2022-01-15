@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
-namespace WebAddressboolTests
+namespace WebAddressbookTests
 {
     public class HelperBase
     {

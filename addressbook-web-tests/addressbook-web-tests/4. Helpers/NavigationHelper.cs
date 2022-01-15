@@ -8,7 +8,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
-namespace WebAddressboolTests
+namespace WebAddressbookTests
 {
     public class NavigationHelper : HelperBase
     {
@@ -25,6 +25,10 @@ namespace WebAddressboolTests
         public void GoToGroupsPage()
         {
             driver.FindElement(By.LinkText("groups")).Click();
+        }
+        public void ReturnToHomePage()
+        {
+            driver.FindElement(By.LinkText("home page")).Click();
         }
     }
 }

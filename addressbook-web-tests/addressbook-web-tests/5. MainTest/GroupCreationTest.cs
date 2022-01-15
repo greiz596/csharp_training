@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using NUnit.Framework;
 
-namespace WebAddressboolTests
+namespace WebAddressbookTests
 {
     [TestFixture]
     class GroupCreationTest : TestBase
@@ -12,16 +12,16 @@ namespace WebAddressboolTests
         [Test]
         public void GroupCreationTests()
         {
-            navigationHelper.GoToHomePage();
-            loginHelper.Login(new AccountData ("admin", "secret"));
-            navigationHelper.GoToGroupsPage();
-            groupHelper.InitNewGroup();
+            applicationManager.Navigator.GoToHomePage();
+            applicationManager.Auth.Login(new AccountData ("admin", "secret"));
+            applicationManager.Navigator.GoToGroupsPage();
+            applicationManager.Groups.InitNewGroup();
             GroupData group = new GroupData("aaa");
             group.Header = "ddd";
             group.Footer = "fff";
-            FillTheFields(group);
-            groupHelper.Submit();
-            groupHelper.ReturnToGroupPage();
+            applicationManager.Groups.FillTheFields(group);
+            applicationManager.Groups.Submit();
+            applicationManager.Groups.ReturnToGroupPage();
             
         }
     }

@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using NUnit.Framework;
 
-namespace WebAddressboolTests
+namespace WebAddressbookTests
 {
     [TestFixture]
     class GroupRemovalTests : TestBase
@@ -12,12 +12,12 @@ namespace WebAddressboolTests
         [Test]
         public void GroupRemovalTest()
         {
-            navigationHelper.GoToHomePage();
-            loginHelper.Login(new AccountData("admin", "secret"));
-            navigationHelper.GoToGroupsPage();
-            groupHelper.SelectGroup(2);
-            groupHelper.RemoveGroup();
-            groupHelper.ReturnToGroupPage();
+            applicationManager.Navigator.GoToHomePage();
+            applicationManager.Auth.Login(new AccountData("admin", "secret"));
+            applicationManager.Navigator.GoToGroupsPage();
+            applicationManager.Groups.SelectGroup(2);
+            applicationManager.Groups.RemoveGroup();
+            applicationManager.Groups.ReturnToGroupPage();
         }        
     }
 }
